@@ -34,7 +34,7 @@ class EditarCliente extends Component {
     componentDidMount() {
         const { id } = this.props.match.params;
  
-        fetch(`${process.env.REACT_APP_API_URL}/${id}`)
+        fetch(`https://p2-bd.herokuapp.com/produto/${id}`)
             .then(data => {
                 data.json().then(data => {
                     if (data.error) {
