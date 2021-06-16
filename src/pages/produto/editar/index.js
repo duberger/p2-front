@@ -34,7 +34,7 @@ class EditarCliente extends Component {
     componentDidMount() {
         const { id } = this.props.match.params;
  
-        fetch(`https://p2-bd.herokuapp.com/produto/${id}`)
+        fetch(`http://localhost:3003/produto/${id}`)
             .then(data => {
                 data.json().then(data => {
                     if (data.error) {
@@ -56,7 +56,7 @@ class EditarCliente extends Component {
             return (
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
-                        <legend>Criar Usuário</legend>
+                        <legend>Alterar Produto</legend>
                         <div className="produto-update">
                             <label htmlFor="nome">Nome </label>
                             <br />
